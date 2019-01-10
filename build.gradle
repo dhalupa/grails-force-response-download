@@ -66,23 +66,24 @@ dependencies {
     testCompile "org.grails:grails-plugin-testing"
 
     console "org.grails:grails-console"
+    compile 'org.grails.plugins:browser-detection:3.4.0'
 }
 
 task wrapper(type: Wrapper) {
     gradleVersion = gradleWrapperVersion
 }
 
-artifactory {
-    contextUrl = 'http://code.abz-reporting.com:8081/artifactory/' // base artifactory url
-    publish {
-        repository {
-            repoKey = 'plugins-snapshot-local'   //The Artifactory repository key to publish to
-            username = abzUser      //The publisher user name
-            password = abzPassword       //The publisher password
-            maven = true
-        }
-        defaults {
-            publications ('maven')
-        }
-    }
-}
+//artifactory {
+//    contextUrl = 'http://code.abz-reporting.com:8081/artifactory/' // base artifactory url
+//    publish {
+//        repository {
+//            repoKey = 'plugins-snapshot-local'   //The Artifactory repository key to publish to
+//            username = abzUser      //The publisher user name
+//            password = abzPassword       //The publisher password
+//            maven = true
+//        }
+//        defaults {
+//            publications ('maven')
+//        }
+//    }
+//}
