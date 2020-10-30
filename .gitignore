@@ -3,9 +3,11 @@
 /target
 /grails-force-response-download*.zip
 /web-app
-
+.classpath
+.project
 .gradle
 build
 grails-force-response-download.ipr
 grails-force-response-download.iws
 grails-force-response-download.iml
+/bin/
