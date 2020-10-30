@@ -70,7 +70,7 @@ The source code is available at http://github.com/pedjak/grails-force-response-d
     }
 
     void onShutdown(Map<String, Object> event) {
-        if (event.source && grailsApplication.isControllerClass(event.source)) {
+        if (event.source && grailsApplication.isControllerClass(event.source.class)) {
             def context = event.ctx
             if (!context) {
                 return
